@@ -1,1 +1,5 @@
-<p>formations works!</p>
+@for (formation of formations; track formation) {
+  <p [ngClass]="{ formationfavorite: formation === 'Angular' }">
+    {{ formation }}
+  </p>
+}
