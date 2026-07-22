@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './accueil.html',
   styleUrl: './accueil.css',
 })
-export class Accueil {}
+export class Accueil {
+
+  inscriptionsOuvertes = signal(true);
+}
