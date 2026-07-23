@@ -6,3 +6,21 @@
 } @else {
   <p>Profil incomplet</p>
 }
+
+<!-- usiamo lo @switch per mostrare i livelli -->
+@switch (niveau) {
+  @case ('debutant') {
+    <p>Débutant</p>
+  }
+  @case ('intermediaire') {
+    <p>Intermédiaire</p>
+  }
+  @case ('avance') {
+    <p>Avancé</p>
+  }
+  @default {
+    <p>Niveau inconnu</p>
+  }
+}
+
+<button (click)="changerNiveau()">Changer le niveau</button>
