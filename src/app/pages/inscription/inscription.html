@@ -1,1 +1,12 @@
-<p>inscription works!</p>
+<label> nom : </label><br />
+<input type="text" [(ngModel)]="service.nom" /><br />
+<label> Prenom : </label><br />
+<input type="text" [(ngModel)]="service.prenom" /><br />
+<label> e-mail: </label><br />
+<input type="text" [(ngModel)]="service.email" /><br />
+<label> formation Choisie : </label><br />
+<input type="text" [(ngModel)]="service.formationChoisie" /><br />
+
+<p>{{ service.nom }} {{ service.prenom }} — {{ service.email }} — {{ service.formationChoisie }}</p>
+
+<button (click)="valider()">Valider l'inscription</button>
