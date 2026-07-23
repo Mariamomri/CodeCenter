@@ -1,13 +1,21 @@
-<h2>Tableau de bord</h2>
+<section class="card">
+  <h2>Tableau de bord</h2>
+  <br />
 
-<p>Nombre total d'inscriptions : {{ service.nombreInscriptions() }}</p>
-<p>Nom : {{ service.nom }}</p>
-<p>Prénom : {{ service.prenom }}</p>
-<p>Formation choisie : {{ service.formationChoisie }}</p>
-<p>Niveau : {{ service.niveau }}</p>
+  <p>Nombre total d'inscriptions : {{ service.nombreInscriptions() }}</p>
+  <br />
+  <p>Nom : {{ service.nom }}</p>
+  <br />
+  <p>Prénom : {{ service.prenom }}</p>
+  <br />
+  <p>Formation choisie : {{ service.formationChoisie }}</p>
+  <br />
+  <p>Niveau : {{ service.niveau }}</p>
+  <br />
 
-@if (service.nom && service.prenom && service.email && service.formationChoisie) {
-  <p>Statut du profil : Profil complet</p>
-} @else {
-  <p>Statut du profil : Profil incomplet</p>
-}
+  @if (service.nom && service.prenom && service.email && service.formationChoisie) {
+    <p>Statut du profil : Profil complet</p>
+  } @else {
+    <p>Statut du profil : Profil incomplet</p>
+  }
+</section>

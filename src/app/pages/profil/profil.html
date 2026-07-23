@@ -1,26 +1,30 @@
-<!-- Mostra i 4 dati con interpolazione di sola lettura -->
-<p>{{ service.nom }} {{ service.prenom }} — {{ service.email }} — {{ service.formationChoisie }}</p>
+<section class="card">
+  <!-- Mostra i 4 dati con interpolazione di sola lettura -->
+  <p>
+    {{ service.nom }} {{ service.prenom }} — {{ service.email }} — {{ service.formationChoisie }}
+  </p>
 
-@if (service.nom && service.prenom && service.email && service.formationChoisie) {
-  <p>Profil complet</p>
-} @else {
-  <p>Profil incomplet</p>
-}
+  @if (service.nom && service.prenom && service.email && service.formationChoisie) {
+    <p>Profil complet</p>
+  } @else {
+    <p>Profil incomplet</p>
+  }
+  <br /><br />
+  <!-- usiamo lo @switch per mostrare i livelli -->
+  @switch (service.niveau) {
+    @case ('debutant') {
+      <p>Débutant</p>
+    }
+    @case ('intermediaire') {
+      <p>Intermédiaire</p>
+    }
+    @case ('avance') {
+      <p>Avancé</p>
+    }
+    @default {
+      <p>Niveau inconnu</p>
+    }
+  }
 
-<!-- usiamo lo @switch per mostrare i livelli -->
-@switch (service.niveau) {
-  @case ('debutant') {
-    <p>Débutant</p>
-  }
-  @case ('intermediaire') {
-    <p>Intermédiaire</p>
-  }
-  @case ('avance') {
-    <p>Avancé</p>
-  }
-  @default {
-    <p>Niveau inconnu</p>
-  }
-}
-
-<button (click)="service.changerNiveau()">Changer le niveau</button>
+  <button (click)="service.changerNiveau()">Changer le niveau</button>
+</section>

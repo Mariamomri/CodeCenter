@@ -1,5 +1,7 @@
-@for (formation of formations; track formation) {
-  <p [ngClass]="{ formationfavorite: formation === 'Angular' }">
-    {{ formation }}
-  </p>
-}
+<section class="formations-liste">
+  @for (formation of formations; track formation) {
+    <p [ngClass]="{ formationfavorite: formation === 'Angular' }">
+      {{ formation }}
+    </p>
+  }
+</section>

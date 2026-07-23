@@ -1,22 +1,26 @@
-<h1 [ngStyle]="{ color: couleurTitre }">Bienvenue chez CodeCenter</h1>
-<p>Centre de Formation en Développement Web</p>
+<section class="accueil">
+  <h1 [ngStyle]="{ color: couleurTitre }">Bienvenue chez CodeCenter</h1>
+  <p>Centre de Formation en Développement Web</p>
+  <br />
 
-<!-- signal -->
-<div>
-  @if (inscriptionsOuvertes()) {
-    <p>Les inscription sont actuellement ouvertes</p>
-  }
-</div>
+  <!-- signal -->
+  <div>
+    @if (inscriptionsOuvertes()) {
+      <p>Les inscription sont actuellement ouvertes</p>
+    }
+  </div>
+  <br />
 
-<!-- Ngstyle  -->
-<button (click)="changerCouleur()">Changer la couleur</button>
+  <!-- Ngstyle  -->
+  <button (click)="changerCouleur()">Changer la couleur</button>
 
-<br /><br />
+  <br /><br />
+  <br /><br />
+  <!-- hidden -->
+  <button (click)="toggleInformations()">Afficher / Masquer</button><br />
 
-<!-- hidden -->
-<button (click)="toggleInformations()">Afficher / Masquer</button>
-
-<section [hidden]="!afficherInformations">
-  <h3>Informations administratives</h3>
-  <p>Contenu de la section...</p>
+  <section [hidden]="!afficherInformations">
+    <h3>Informations administratives</h3>
+    <p>Contenu bla bla</p>
+  </section>
 </section>
