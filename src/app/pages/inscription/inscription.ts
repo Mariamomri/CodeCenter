@@ -1,4 +1,4 @@
-import { Component , inject } from '@angular/core';
+import { Component , inject , signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Stagiaire } from '../../services/stagiaire';
 
@@ -16,4 +16,12 @@ export class Inscription {
   valider() {
   console.log('Inscription validée', this.service.nom, this.service.prenom);
 }
+
+
+nombreInscriptions = signal(0);
+
+ajouterInscription() {
+  this.nombreInscriptions.update(n => n + 1);
+}
+
 }

@@ -10,3 +10,7 @@
 <p>{{ service.nom }} {{ service.prenom }} — {{ service.email }} — {{ service.formationChoisie }}</p>
 
 <button (click)="valider()">Valider l'inscription</button>
+
+<!-- signal modificazione -->
+<p>Nombre total d'inscriptions : {{ nombreInscriptions() }}</p>
+<button (click)="ajouterInscription()">Nouvelle inscription</button>
