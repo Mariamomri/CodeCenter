@@ -1,7 +1,12 @@
-<h1>Bienvenue chez CodeCenter</h1>
+<h1 [ngStyle]="{ color: couleurTitre }">Bienvenue chez CodeCenter</h1>
 <p>Centre de Formation en Développement Web</p>
+
+<!-- signal -->
 <div>
   @if (inscriptionsOuvertes()) {
     <p>Les inscription sont actuellement ouvertes</p>
   }
 </div>
+
+<!-- Ngstyle  -->
+<button (click)="changerCouleur()">Changer la couleur</button>
