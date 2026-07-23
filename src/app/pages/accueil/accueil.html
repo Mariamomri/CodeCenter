@@ -10,3 +10,13 @@
 
 <!-- Ngstyle  -->
 <button (click)="changerCouleur()">Changer la couleur</button>
+
+<br /><br />
+
+<!-- hidden -->
+<button (click)="toggleInformations()">Afficher / Masquer</button>
+
+<section [hidden]="!afficherInformations">
+  <h3>Informations administratives</h3>
+  <p>Contenu de la section...</p>
+</section>
