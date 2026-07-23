@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , inject } from '@angular/core';
+import { Stagiaire } from '../../services/stagiaire';
+
 
 @Component({
   selector: 'app-profil',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './profil.html',
   styleUrl: './profil.css',
 })
-export class Profil {}
+export class Profil {
+  service = inject(Stagiaire);
+}

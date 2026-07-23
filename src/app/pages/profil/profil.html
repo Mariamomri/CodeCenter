@@ -1,1 +1,8 @@
-<p>profil works!</p>
+<!-- Mostra i 4 dati con interpolazione di sola lettura -->
+<p>{{ service.nom }} {{ service.prenom }} — {{ service.email }} — {{ service.formationChoisie }}</p>
+
+@if (service.nom && service.prenom && service.email && service.formationChoisie) {
+  <p>Profil complet</p>
+} @else {
+  <p>Profil incomplet</p>
+}
