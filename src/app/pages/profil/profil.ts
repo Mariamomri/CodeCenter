@@ -16,11 +16,5 @@ export class Profil {
 
   niveaux = ['debutant', 'intermediaire', 'avance'];
 
-  changerNiveau() {
-    const posizioneAttuale = this.niveaux.indexOf(this.niveau);
-    const posizioneSuccessiva = (posizioneAttuale + 1) % this.niveaux.length;
-    this.niveau = this.niveaux[posizioneSuccessiva];
-  }
-
 
 }

@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<h2>Tableau de bord</h2>
+
+<p>Nombre total d'inscriptions : {{ service.nombreInscriptions() }}</p>
+<p>Nom : {{ service.nom }}</p>
+<p>Prénom : {{ service.prenom }}</p>
+<p>Formation choisie : {{ service.formationChoisie }}</p>
+<p>Niveau : {{ service.niveau }}</p>
+
+@if (service.nom && service.prenom && service.email && service.formationChoisie) {
+  <p>Statut du profil : Profil complet</p>
+} @else {
+  <p>Statut du profil : Profil incomplet</p>
+}

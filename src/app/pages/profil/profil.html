@@ -8,7 +8,7 @@
 }
 
 <!-- usiamo lo @switch per mostrare i livelli -->
-@switch (niveau) {
+@switch (service.niveau) {
   @case ('debutant') {
     <p>Débutant</p>
   }
@@ -23,4 +23,4 @@
   }
 }
 
-<button (click)="changerNiveau()">Changer le niveau</button>
+<button (click)="service.changerNiveau()">Changer le niveau</button>
